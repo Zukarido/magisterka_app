@@ -29,10 +29,10 @@ class MyGrid(GridLayout):
         self.curdirlabel = Label(text = cur_dir)
         self.add_widget(self.curdirlabel)
 
-        self.file = FileChooserListView(path = cur_dir)
-        self.add_widget(self.file)
+        # self.file = FileChooserListView(path = cur_dir)
+        # self.add_widget(self.file)
 
-        self.model = tf.keras.models.load_model('mobilenet.hdf5')
+        #self.model = tf.keras.models.load_model('mobilenet.hdf5')
 
         # self.choose_photo_btn = Button(text="pre")
         # self.choose_photo_btn.bind(on_press=self.choose_photo)
@@ -54,7 +54,6 @@ class MyGrid(GridLayout):
         # self.add_widget(self.file)
 
     def predict_lesion(self, instance):
-        self.preprocess("ISIC_0024319.jpg")
         return 0
     # def choose_photo(self, instance):
 
