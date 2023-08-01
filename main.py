@@ -20,7 +20,7 @@ class MyGrid(GridLayout):
         self.cols=3
 
 
-        self.predict_btn = Button(text="predict", background_color=[1,1,1,1])
+        self.predict_btn = Button(text="predict", background_color=(1,0,0,1))
         self.predict_btn.bind(on_press=self.predict_lesion)
         self.add_widget(self.predict_btn)
 
