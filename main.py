@@ -13,6 +13,10 @@ from kivy.uix.filechooser import FileChooserListView
 from kivy.uix.image import Image
 import numpy as np
 import os
+from kivy.logger import Logger
+
+
+
 
 class MyGrid(GridLayout):
     def __init__(self, **kwargs):
@@ -24,10 +28,6 @@ class MyGrid(GridLayout):
         self.predict_btn.bind(on_press=self.predict_lesion)
         self.add_widget(self.predict_btn)
 
-        cur_dir=os.getcwd()
-
-        self.curdirlabel = Label(text = cur_dir)
-        self.add_widget(self.curdirlabel)
 
         # self.file = FileChooserListView(path = cur_dir)
         # self.add_widget(self.file)
