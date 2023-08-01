@@ -20,7 +20,7 @@ class MyGrid(GridLayout):
         self.cols=3
 
 
-        self.predict_btn = Button(text="predict")
+        self.predict_btn = Button(text="predict", background_color=[1,1,1,1])
         self.predict_btn.bind(on_press=self.predict_lesion)
         self.add_widget(self.predict_btn)
 
@@ -67,13 +67,13 @@ class MyGrid(GridLayout):
 
 
 
-    def preprocess(self, path):
-        img  = tf.keras.utils.load_img(path = path, grayscale=False, color_mode="rgb",target_size=(224,224), interpolation="nearest",keep_aspect_ratio=False)
-        print(type(img))
-        img  = np.array(img)
-        y = self.model((img[np.newaxis,:,:,:]), training=False)
-        print(y.numpy()[0][0])
-        self.cur_dir = str(y.numpy()[0][0])
+    # def preprocess(self, path):
+    #     img  = tf.keras.utils.load_img(path = path, grayscale=False, color_mode="rgb",target_size=(224,224), interpolation="nearest",keep_aspect_ratio=False)
+    #     print(type(img))
+    #     img  = np.array(img)
+    #     y = self.model((img[np.newaxis,:,:,:]), training=False)
+    #     print(y.numpy()[0][0])
+    #     self.cur_dir = str(y.numpy()[0][0])
         
 
 
