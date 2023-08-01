@@ -7,8 +7,6 @@ from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.camera import Camera
-import time
-import tensorflow as tf
 from kivy.uix.filechooser import FileChooserListView
 from kivy.uix.image import Image
 import numpy as np
@@ -24,9 +22,9 @@ class MyGrid(GridLayout):
         self.cols=3
 
 
-        self.predict_btn = Button(text="predict", background_color=(1,0,0,1))
-        self.predict_btn.bind(on_press=self.predict_lesion)
-        self.add_widget(self.predict_btn)
+        # self.predict_btn = Button(text="predict", background_color=(1,0,0,1))
+        # self.predict_btn.bind(on_press=self.predict_lesion)
+        # self.add_widget(self.predict_btn)
 
 
         # self.file = FileChooserListView(path = cur_dir)
@@ -53,8 +51,8 @@ class MyGrid(GridLayout):
         # self.file = FileChooserListView(path = "S:\Magisterka_app/")
         # self.add_widget(self.file)
 
-    def predict_lesion(self, instance):
-        return 0
+    # def predict_lesion(self, instance):
+    #     return 0
     # def choose_photo(self, instance):
 
     #     self.preprocess("S:\Magisterka_app/ISIC_0024319.jpg")
